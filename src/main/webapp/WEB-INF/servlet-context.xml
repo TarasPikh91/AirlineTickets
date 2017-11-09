@@ -21,6 +21,12 @@
     <mvc:annotation-driven/>
 
 
+    <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
+    <mvc:resources mapping="/fonts/**" location="/WEB-INF/fonts/"/>
+    <!--<mvc:resources mapping="/css/**" location="/WEB-INF/libraries/css/"/>-->
+    <mvc:resources mapping="/fonts/**" location="/WEB-INF/css/fonts/"/>
+
+
 
 
 </beans>
