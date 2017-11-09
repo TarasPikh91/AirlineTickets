@@ -1,17 +1,207 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<!DOCTYPE html>--%>
 <html>
 <head>
-    <title>123</title>
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <title>SkyFlow</title>
+  <meta content=".png">
+  <link rel="apple-touch-icon-precomposed" href=".png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href=".ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="../libraries/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
 </head>
 <body>
-   <h1 align="center">Hello SkyFlow!</h1>
+ <div class="wrapper">
+  <div class="header">
+   <div class="logo">
+     <img src="../css/images/logoSkyFlow.png" alt="logo" id="logo">
+   </div>
+   <div class="menu">
+    <ul>
+     <li><a href="#">Flights</a></li>
+     <li><a href="#">News</a></li>
+     <li><a href="#">About</a></li>
+    </ul>
+   </div>
+   <p><a href="#" id="SignInSignUp">SignIn/SignUp</a></p>
+  </div>
+  <div class="content">
+    <div class="fustTickets">
+     <a href="#" id="roundTrip">Rount-Trip</a>
+     <a href="#" id="oneWay">One-Way</a>
+     <form action="" method="post">
+      <div class="formCity">
+       <input type="text" list="cityfrom" id="fromCity" placeholder="From">
+       <label for="fromCity" id="label1"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
+       <datalist id="cityfrom">
+        <option value="New York"></option>
+        <option value="Barcelona"></option>
+        <option value="Lviv"></option>
+       </datalist>
+      </div>
+      <div class="tocity">
+       <input type="text" list="cityto" id="toCity" placeholder="To">
+       <label for="toCity" id="label2"><i class="fa fa-thumb-tack" aria-hidden="true"></i></label>
+       <datalist id="cityto">
+        <option value="Tel-Aviv"></option>
+        <option value="Los Angeles"></option>
+        <option value="Paris"></option>
+       </datalist>
+      </div>
+      <div class="blockPass">
+        <input type="text" placeholder="Passenger" class="passenger" id="passenger" disabled>
+        <label for="passenger" id="label3"><i class="fa fa-users" aria-hidden="true"></i></label>
+        <div class="psm">
+         <div class="passengerMore">
+         <p>Adults<p>(16+)</p></p>
+         <p>-</p><p>+</p>
+         <p>Youths<p>(12-15)</p></p>
+         <p>-</p><p>+</p>
+         <p>Children<p>(2-11)</p></p>
+         <p>-</p><p>+</p>
+         <p>Infants<p>(On lap)</p></p>
+         <p>-</p><p>+</p>
+        </div>
+        </div>
+      </div>
+      <div class="blockPromotion">
+       <input type="text" id="promotion" placeholder="Promotion Code">
+       <label for="promotion" id="label4"><i class="fa fa-star-o" aria-hidden="true"></i></label>
+      </div>
+      <div class="calendars">
+       <div class="blockDepart">
+        <input type="text" id="depart" placeholder="Depart">
+        <label for="depart" id="label5"><i class="fa fa-calendar" aria-hidden="true"></i></label>
+        <div class="departCalendar">
+        </div>
+       </div>
+       <div class="blockReturn">
+        <input type="text" id="return" placeholder="Return">
+        <label for="return" id="label6"><i class="fa fa-calendar" aria-hidden="true"></i></label>
+        <div class="returnCalendar">
+        </div>
+       </div>
+      </div>
+      <p id="searchTickets"><a href="#">Search</a></p>
+     </form>
+    </div>
+     <!-- <img src="../images/barcelona.png" id="backgroundHeader"/> -->
+   <h2>Barcelona</h2>
+   <hr>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">more...</a></p>
+   <div class="buytickets">
+    <p>Buy Tickets</p>
+   </div>
+  </div>
+  <div class="content2">
+    <h1 id="AboutSkyFlow">About SkyFlow</h1>
+    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <img src="../css/images/specialoffer.png" alt="specialoffer" id="specialOffer">
+    <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+    <p id="buttonSpecialOffer"><a href="#">-50%</a></p>
+  </div>
+  <div class="content3">
+   <div class="block1">
+    <div class="image1">
+     <div class="grayBlock">
+      <h1><a href="#">News</a></h1>
+     </div>
+    </div>
+    <p>Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p id="more1">more...</p>
+   </div>
+   <div class="block2">
+    <div class="image2">
+     <div class="grayBlock2">
+      <h1><a href="#">Flights</a></h1>
+     </div>
+    </div>
+    <p>Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p id="more2">more...</p>
+   </div>
+   <div class="block3">
+    <div class="image3">
+     <div class="grayBlock3">
+      <h1><a href="#">About</a></h1>
+     </div>
+    </div>
+    <p>Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p id="more3">more...</p>
+   </div>
+  </div>
+  </div>
+  <div class="footer">
+   <div class="footerBl1">
+    <h1><a href="#">FaQ</a></h1>
+    <hr>
+    <p><a href="#">What is it SkyFlow?</a></p>
+    <p><a href="#">How this do?</a></p>
+    <p><a href="#">How buy tickets?</a></p>
+    <p><a href="#">How SingIn this site?</a></p>
+    <p><a href="#">Who programmer?</a></p>
+    <p><a href="#">How time do this site?</a></p>
+    <p><a href="#">What it?</a></p>
+    <p><a href="#">How pay?</a></p>
+   </div>
+   <div class="footerBl2">
+    <h1><a href="#">FaQ</a></h1>
+    <hr>
+    <p><a href="#">What is it SkyFlow?</a></p>
+    <p><a href="#">How this do?</a></p>
+    <p><a href="#">How buy tickets?</a></p>
+    <p><a href="#">How SingIn this site?</a></p>
+    <p><a href="#">Who programmer?</a></p>
+    <p><a href="#">How time do this site?</a></p>
+    <p><a href="#">What it?</a></p>
+    <p><a href="#">How pay?</a></p>
+   </div>
+   <div class="footerBl3">
+    <h1><a href="#">FaQ</a></h1>
+    <hr>
+    <p><a href="#">What is it SkyFlow?</a></p>
+    <p><a href="#">How this do?</a></p>
+    <p><a href="#">How buy tickets?</a></p>
+    <p><a href="#">How SingIn this site?</a></p>
+    <p><a href="#">Who programmer?</a></p>
+    <p><a href="#">How time do this site?</a></p>
+    <p><a href="#">What it?</a></p>
+    <p><a href="#">How pay?</a></p>
+   </div>
+   <div class="socialIcons">
+    <p><a href="#" id="icon1"><i class="fa fa-instagram" aria-hidden="true"></i></a></p>
+    <p><a href="#"id="icon2"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></p>
+    <p><a href="#"id="icon3"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></p>
+    <p><a href="#"id="icon4"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></p>
+   </div>
+  </div>
+ </div>
+  <!-- <nav class="nav navbar-default navbar-fixed-top">
+   <div class="container-fluid">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
+         <span class=sr-only>Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <img src="../images/logoSkyFlow.png" class="navbar-brand container" id="logo">
+     </div>
+     <div class="collapse navbar-collapse" id="navbar-main">
+       <ul id="menu">
+         <li><a href="#">Flights</a></li>
+         <li><a href="#">News</a></li>
+         <li><a href="#">About</a></li>
+       </ul>
+     </div>
+   </div>
+  </nav> -->
+  <!-- <script type="text/javascript" src="../libraries/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 </body>
 </html>
