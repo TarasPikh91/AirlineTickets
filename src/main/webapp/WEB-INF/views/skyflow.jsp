@@ -11,10 +11,11 @@
   <!-- <link rel="stylesheet" href="../libraries/css/bootstrap.css"> -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 </head>
 <body>
  <div class="wrapper">
-  <div class="header">
+  <div class="header" id="header">
    <div class="logo">
      <img src="../css/images/logoSkyFlow.png" alt="logo" id="logo">
    </div>
@@ -201,7 +202,6 @@
    </div>
   </nav> -->
   <!-- <script type="text/javascript" src="../libraries/js/bootstrap.min.js"></script> -->
-  <script type="text/javascript" src="../js/script.js"></script>
-  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+ <script src="../js/script.js"></script>
 </body>
 </html>
