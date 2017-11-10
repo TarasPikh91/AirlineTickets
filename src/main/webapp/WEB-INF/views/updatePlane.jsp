@@ -3,8 +3,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Taras
-  Date: 11/6/2017
-  Time: 8:50 PM
+  Date: 11/10/2017
+  Time: 8:15 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,21 +13,19 @@
     <title>Title</title>
 </head>
 <body>
-<form:form modelAttribute="plane" method="post">
-    <form:input path="name" placeholder="Plane Name"/>
-    <form:input path="type" placeholder="Type"/>
-    <form:input path="seat" placeholder="Number of seats"/>
+<form:form modelAttribute="planeToUpdate" method="post">
+    <label>Name</label>
+    <form:input path="name"/>
+    <label>Seat</label>
+    <form:input path="seat"/>
+    <form:input path="type"/>
     <select name="companyId">
+            <option value="${planeToUpdate.company.id}">${planeToUpdate.company.name}</option>
         <c:forEach var="company" items="${companies}">
             <option value="${company.id}">${company.name}</option>
         </c:forEach>
     </select>
-    <button type="submit">Save</button>
+    <button>Update</button>
 </form:form>
-<ul>
-<c:forEach var="plane" items="${planes}">
-  <li>${plane.name}<a href="/deletePlane/${plane.id}">Delete</a><a href="/updatePlane/${plane.id}">Update</a></li>
-</c:forEach>
-</ul>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Taras
-  Date: 11/6/2017
-  Time: 9:04 PM
+  Date: 11/10/2017
+  Time: 9:39 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,26 +13,24 @@
     <title>Title</title>
 </head>
 <body>
-<form:form modelAttribute="ticket" method="post">
+<form:form modelAttribute="ticketToUpdate" method="post">
     <form:input path="numberSeat"/>
-    <form:input path="currency"/>
     <form:input path="price"/>
+    <form:input path="currency"/>
     <select name="planeId">
+        <option value="${ticketToUpdate.plane.id}">${ticketToUpdate.plane.name}</option>
         <c:forEach var="plane" items="${planes}">
             <option value="${plane.id}">${plane.name}</option>
         </c:forEach>
     </select>
+
     <select name="cityId">
+        <option value="${ticketToUpdate.city.id}">${ticketToUpdate.city.name}</option>
         <c:forEach var="city" items="${cities}">
             <option value="${city.id}">${city.name}</option>
         </c:forEach>
     </select>
-    <button type="submit">Save</button>
+    <button type="submit">Update</button>
 </form:form>
-<ul>
-    <c:forEach var="ticket" items="${tickets}">
-        <li>${ticket.numberSeat}<a href="/deleteTicket/${ticket.id}">Delete</a><a href="/updateTicket/${ticket.id}">Update</a></li>
-    </c:forEach>
-</ul>
 </body>
 </html>

@@ -15,4 +15,5 @@ public interface CompanyService {
     List<Company> findAll();
 
     void update(Company company);
+
 }

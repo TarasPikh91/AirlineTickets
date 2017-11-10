@@ -1,6 +1,8 @@
 package com.AirlineTickets.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -18,8 +20,8 @@ public class City {
     @ManyToOne
     private Country country;
 
-    @OneToOne
-    private Ticket ticket;
+    @OneToMany(mappedBy = "city")
+    private List<Ticket> tickets = new ArrayList<Ticket>();
 
 
     public City() {
@@ -58,12 +60,12 @@ public class City {
         this.country = country;
     }
 
-    public Ticket getTicket() {
-        return ticket;
+    public List<Ticket> getTickets() {
+        return tickets;
     }
 
-    public void setTicket(Ticket ticket) {
-        this.ticket = ticket;
+    public void setTickets(List<Ticket> tickets) {
+        this.tickets = tickets;
     }
 
     @Override
