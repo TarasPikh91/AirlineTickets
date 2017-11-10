@@ -14,7 +14,7 @@ public class Ticket {
     private int price;
     private String currency;
 
-    @OneToOne(mappedBy = "ticket")
+    @ManyToOne
     private City city;
 
     @OneToOne(mappedBy = "ticket")

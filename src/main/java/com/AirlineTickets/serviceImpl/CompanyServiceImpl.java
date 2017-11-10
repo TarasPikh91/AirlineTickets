@@ -1,7 +1,9 @@
 package com.AirlineTickets.serviceImpl;
 
 import com.AirlineTickets.dao.CompanyDao;
+import com.AirlineTickets.dao.PlaneDao;
 import com.AirlineTickets.entity.Company;
+import com.AirlineTickets.entity.Plane;
 import com.AirlineTickets.service.CompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,9 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Autowired
     private CompanyDao companyDao;
+
+    @Autowired
+    private PlaneDao planeDao;
 
 
     @Override
@@ -27,7 +32,13 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Override
     public void delete(int id) {
-        companyDao.delete(id);
+
+        Company company = companyDao.companyWithPlanes(id);
+        for(Plane plane : company.getPlanes()){
+            plane.setCompany(null);
+            planeDao.saveAndFlush(plane);
+        }
+         companyDao.delete(id);
     }
 
     @Override

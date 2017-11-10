@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CityService {
 
-    void save(City city);
+    void save(City city, int countryId);
 
     List<City> findAll();
 
@@ -14,5 +14,5 @@ public interface CityService {
 
     void delete(int id);
 
-    void update(City city);
+    void update(City city, int countryId);
 }

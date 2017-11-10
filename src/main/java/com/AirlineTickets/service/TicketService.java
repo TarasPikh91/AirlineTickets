@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface TicketService {
 
-    void save(Ticket ticket);
+    void save(Ticket ticket, int planeId, int cityId);
 
-    void update(Ticket ticket);
+    void update(Ticket ticket, int planeId, int cityId);
 
     void delete(int id);
 

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface PlaneService {
 
-    void save(Plane plane);
+    void save(Plane plane, int companyId);
 
     void delete(int id);
 
@@ -14,5 +14,5 @@ public interface PlaneService {
 
     List<Plane> findAll();
 
-    void update(Plane plane);
+    void update(Plane plane, int companyId);
 }

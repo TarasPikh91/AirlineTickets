@@ -1,6 +1,8 @@
 package com.AirlineTickets.serviceImpl;
 
+import com.AirlineTickets.dao.CityDao;
 import com.AirlineTickets.dao.CountryDao;
+import com.AirlineTickets.entity.City;
 import com.AirlineTickets.entity.Country;
 import com.AirlineTickets.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,11 @@ public class CountryServiceImpl implements CountryService {
 
     @Autowired
     private CountryDao countryDao;
+
+    @Autowired
+    private CityDao cityDao;
+
+
     @Override
     public void save(Country country) {
         countryDao.save(country);
@@ -34,6 +41,13 @@ public class CountryServiceImpl implements CountryService {
 
     @Override
     public void delete(int id) {
+        Country country = countryDao.countryWithCity(id);
+        for(City city :country.getCities()){
+            city.setCountry(null);
+            cityDao.saveAndFlush(city);
+        }
+
         countryDao.delete(id);
     }
+
 }

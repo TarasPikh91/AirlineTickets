@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<!DOCTYPE html>--%>
 <html>
@@ -21,9 +22,18 @@
    </div>
    <div class="menu">
     <ul>
+
      <li><a href="#">Flights</a></li>
      <li><a href="#">News</a></li>
      <li><a href="#">About</a></li>
+     <sec:authorize access="isAuthenticated()">
+      <li><a href="/city">City</a></li>
+      <li><a href="/company">Company</a></li>
+      <li><a href="/country">Country</a></li>
+      <li><a href="/plane">Plane</a></li>
+      <li><a href="/ticket">Tickets</a></li>
+      <li><a href="/user">User</a></li>
+     </sec:authorize>
     </ul>
    </div>
    <p><a href="#" id="SignInSignUp">SignIn/SignUp</a></p>

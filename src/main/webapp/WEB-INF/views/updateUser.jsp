@@ -1,10 +1,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Taras
-  Date: 11/6/2017
-  Time: 9:26 PM
+  Date: 11/11/2017
+  Time: 12:14 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,7 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-<form:form modelAttribute="user" method="post">
+<form:form method="post" modelAttribute="userToUpdate">
     <label>First Name</label>
     <form:input path="firstName"/>
 
@@ -31,10 +30,5 @@
 
     <button>Save</button>
 </form:form>
-<ul>
-    <c:forEach var="user" items="${users}">
-        <li>${user.firstName}${user.lastName}<a href="/deleteUser/${user.id}">Delete</a><a href="/updateUser/${user.id}">Update</a></li>
-    </c:forEach>
-</ul>
 </body>
 </html>

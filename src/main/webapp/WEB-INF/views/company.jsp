@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Taras
@@ -11,6 +13,14 @@
     <title>Title</title>
 </head>
 <body>
-
+<form:form modelAttribute="company" method="post">
+    <form:input path="name"/>
+    <button>Save</button>
+</form:form>
+<ul>
+    <c:forEach var="company" items="${companies}">
+        <li>${company.name}<a href="/deleteCompany/${company.id}">Delete</a><a href="/updateCompany/${company.id}">Update</a></li>
+    </c:forEach>
+</ul>
 </body>
 </html>
