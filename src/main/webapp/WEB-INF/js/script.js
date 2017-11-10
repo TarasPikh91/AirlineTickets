@@ -22,7 +22,7 @@
 // }
 $(document).scroll(function() {
   if ($(document).width() > 785) {
-    if ($(document).scrollTop() > $('#header').height()) {
+    if ($(document).scrollTop() > $('#header').height() 100){
       $('#header').height();
     }
     else {
