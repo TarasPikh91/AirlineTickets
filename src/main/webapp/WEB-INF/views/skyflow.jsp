@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<!DOCTYPE html>--%>
 <html>
@@ -34,13 +35,15 @@
      <a href="#" id="oneWay">One-Way</a>
      <form action="" method="post">
       <div class="formCity">
-       <input type="text" list="cityfrom" id="fromCity" placeholder="From">
+       <%--<input type="text" list="cityfrom" id="fromCity" placeholder="From">--%>
        <label for="fromCity" id="label1"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
-       <datalist id="cityfrom">
-        <option value="New York"></option>
-        <option value="Barcelona"></option>
-        <option value="Lviv"></option>
-       </datalist>
+       <%--<datalist id="cityfrom">--%>
+        <select type="text" list="cityfrom" id="fromCity" placeholder="From">
+         <c:forEach var="city" items="${cities}">
+          <option value="${city.id}">${city.name}</option>
+         </c:forEach>
+        </select>
+       <%--</datalist>--%>
       </div>
       <div class="tocity">
        <input type="text" list="cityto" id="toCity" placeholder="To">
