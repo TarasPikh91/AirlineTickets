@@ -14,7 +14,11 @@ public class Ticket {
     private int price;
     private String currency;
 
+<<<<<<< HEAD
     @OneToOne(mappedBy = "ticket")
+=======
+    @ManyToOne
+>>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
     private City city;
 
     @OneToOne(mappedBy = "ticket")

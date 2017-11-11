@@ -7,6 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.PathVariable;
+>>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -28,4 +32,27 @@ public class CompanyController {
         return "redirect:/company";
     }
 
+<<<<<<< HEAD
+=======
+    @GetMapping("/deleteCompany/{id}")
+    public String deleteCompany(@PathVariable int id){
+        companyService.delete(id);
+        return "redirect:/company";
+    }
+
+    @GetMapping("/updateCompany/{id}")
+    public String updateCompany(@PathVariable int id, Model model){
+        Company company = companyService.findOne(id);
+        model.addAttribute("companyToUpdate", company);
+        return "updateCompany";
+    }
+
+    @PostMapping("/updateCompany/{id}")
+    public String updateCompany(@PathVariable int id, Model model, @ModelAttribute Company company){
+        model.addAttribute("companyToUpdate", companyService.findOne(id));
+        companyService.update(company);
+        return "redirect:/company";
+    }
+
+>>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
 }

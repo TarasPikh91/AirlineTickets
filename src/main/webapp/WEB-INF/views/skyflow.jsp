@@ -1,4 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<<<<<<< HEAD
+=======
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+>>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%-- <!DOCTYPE html> --%>
 <html>
@@ -22,12 +27,33 @@
    </div>
    <div class="menu">
     <ul>
+<<<<<<< HEAD
      <li><a href="#">Flights</a></li>
      <li><a href="#">News</a></li>
      <li><a href="#">About</a></li>
     </ul>
    </div>
    <p><a href="#" id="SignInSignUp">SignIn/SignUp</a></p>
+=======
+
+     <li><a href="#">Flights</a></li>
+     <li><a href="#">News</a></li>
+     <li><a href="#">About</a></li>
+     <sec:authorize access="isAuthenticated()">
+      <li><a href="/city">City</a></li>
+      <li><a href="/company">Company</a></li>
+      <li><a href="/country">Country</a></li>
+      <li><a href="/plane">Plane</a></li>
+      <li><a href="/ticket">Tickets</a></li>
+      <li><a href="/user">User</a></li>
+     </sec:authorize>
+    </ul>
+   </div>
+   <p><a href="/registrationAndLogIn" id="SignInSignUp">SignIn/SignUp</a></p>
+   <sec:authorize access="isAuthenticated()">
+    <form:form action="logout" method="post"><button class="btn btn-default">Log Out</button></form:form>
+   </sec:authorize>
+>>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
   </div>
   <div class="content">
     <div class="fustTickets">

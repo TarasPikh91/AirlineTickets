@@ -15,4 +15,9 @@ public interface UserService {
     List<User> findAll();
 
     User findOne(int id);
+<<<<<<< HEAD
+=======
+
+    User userWithUuid(String uuid);
+>>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
 }
