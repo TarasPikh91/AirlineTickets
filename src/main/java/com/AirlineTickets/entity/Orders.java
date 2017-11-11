@@ -15,10 +15,6 @@ public class Orders {
     private int id;
     private LocalDateTime date;
 
-    @ManyToMany
-    @JoinTable(name = "orders_user", joinColumns = @JoinColumn(name ="orders"),
-    inverseJoinColumns = @JoinColumn(name = "user"))
-    private List<User> users = new ArrayList<User>();
 
     @ManyToOne
     private User user;
@@ -58,14 +54,6 @@ public class Orders {
 
     public void setDate(LocalDateTime date) {
         this.date = date;
-    }
-
-    public List<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(List<User> users) {
-        this.users = users;
     }
 
     @Override

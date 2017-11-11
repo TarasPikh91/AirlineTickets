@@ -1,11 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<<<<<<< HEAD
-=======
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
->>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%-- <!DOCTYPE html> --%>
+<%--<!DOCTYPE html>--%>
 <html>
 <head>
   <title>SkyFlow</title>
@@ -17,43 +11,21 @@
   <!-- <link rel="stylesheet" href="../libraries/css/bootstrap.css"> -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 </head>
 <body>
  <div class="wrapper">
-  <div class="header" id="header">
+  <div class="header">
    <div class="logo">
      <img src="../css/images/logoSkyFlow.png" alt="logo" id="logo">
    </div>
    <div class="menu">
     <ul>
-<<<<<<< HEAD
      <li><a href="#">Flights</a></li>
      <li><a href="#">News</a></li>
      <li><a href="#">About</a></li>
     </ul>
    </div>
    <p><a href="#" id="SignInSignUp">SignIn/SignUp</a></p>
-=======
-
-     <li><a href="#">Flights</a></li>
-     <li><a href="#">News</a></li>
-     <li><a href="#">About</a></li>
-     <sec:authorize access="isAuthenticated()">
-      <li><a href="/city">City</a></li>
-      <li><a href="/company">Company</a></li>
-      <li><a href="/country">Country</a></li>
-      <li><a href="/plane">Plane</a></li>
-      <li><a href="/ticket">Tickets</a></li>
-      <li><a href="/user">User</a></li>
-     </sec:authorize>
-    </ul>
-   </div>
-   <p><a href="/registrationAndLogIn" id="SignInSignUp">SignIn/SignUp</a></p>
-   <sec:authorize access="isAuthenticated()">
-    <form:form action="logout" method="post"><button class="btn btn-default">Log Out</button></form:form>
-   </sec:authorize>
->>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
   </div>
   <div class="content">
     <div class="fustTickets">
@@ -61,15 +33,13 @@
      <a href="#" id="oneWay">One-Way</a>
      <form action="" method="post">
       <div class="formCity">
-       <%--<input type="text" list="cityfrom" id="fromCity" placeholder="From">--%>
+       <input type="text" list="cityfrom" id="fromCity" placeholder="From">
        <label for="fromCity" id="label1"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
-       <%--<datalist id="cityfrom">--%>
-        <select type="text" list="cityfrom" id="fromCity" placeholder="From">
-         <c:forEach var="city" items="${cities}">
-          <option value="${city.id}">${city.name}</option>
-         </c:forEach>
-        </select>
-       <%--</datalist>--%>
+       <datalist id="cityfrom">
+        <option value="New York"></option>
+        <option value="Barcelona"></option>
+        <option value="Lviv"></option>
+       </datalist>
       </div>
       <div class="tocity">
        <input type="text" list="cityto" id="toCity" placeholder="To">
@@ -231,6 +201,7 @@
    </div>
   </nav> -->
   <!-- <script type="text/javascript" src="../libraries/js/bootstrap.min.js"></script> -->
- <script src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 </body>
 </html>

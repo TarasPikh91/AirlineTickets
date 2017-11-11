@@ -1,6 +1,9 @@
 package com.AirlineTickets.entity;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by ooo on 10/29/2017.
@@ -10,31 +13,18 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private int numberTicket; //Number on Ticket(numeration)
     private int numberSeat;   // Number of seat
     private int price;
     private String currency;
 
-<<<<<<< HEAD
-    @OneToOne(mappedBy = "ticket")
-=======
-    @ManyToOne
->>>>>>> 3e3845585f680f611c0680dfe22e19481498ed4b
-    private City city;
-
-    @OneToOne(mappedBy = "ticket")
-    private Country country;
-
-    @ManyToOne
-    private User user;
-    @ManyToOne
-    private Plane plane;
 
     public Ticket(){
 
     }
 
-    public Ticket( int numberSeat, int price, String currency) {
-
+    public Ticket(int numberTicket, int numberSeat, int price, String currency) {
+        this.numberTicket = numberTicket;
         this.numberSeat = numberSeat;
         this.price = price;
         this.currency = currency;
@@ -46,6 +36,14 @@ public class Ticket {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getNumberTicket() {
+        return numberTicket;
+    }
+
+    public void setNumberTicket(int numberTicket) {
+        this.numberTicket = numberTicket;
     }
 
     public int getNumberSeat() {
@@ -72,42 +70,11 @@ public class Ticket {
         this.currency = currency;
     }
 
-    public City getCity() {
-        return city;
-    }
-
-    public void setCity(City city) {
-        this.city = city;
-    }
-
-    public Country getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country country) {
-        this.country = country;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Plane getPlane() {
-        return plane;
-    }
-
-    public void setPlane(Plane plane) {
-        this.plane = plane;
-    }
-
     @Override
     public String toString() {
         return "Ticket{" +
                 "id=" + id +
+                ", numberTicket=" + numberTicket +
                 ", numberSeat=" + numberSeat +
                 ", price=" + price +
                 ", currency='" + currency + '\'' +
