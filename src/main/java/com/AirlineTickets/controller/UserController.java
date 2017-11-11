@@ -1,6 +1,7 @@
 package com.AirlineTickets.controller;
 
 import com.AirlineTickets.entity.User;
+import com.AirlineTickets.service.MailSendlerService;
 import com.AirlineTickets.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.UUID;
+
 
 @Controller
 public class UserController {
@@ -17,17 +20,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private MailSendlerService mailSendlerService;
+
     @GetMapping("/user")
     public String user(Model model){
         model.addAttribute("users", userService.findAll());
         model.addAttribute("user", new User());
         return "user";
-    }
-
-    @PostMapping("/user")
-    public String saveUser(@ModelAttribute User user){
-        userService.save(user);
-        return "redirect:/user";
     }
 
     @GetMapping("/deleteUser/{id}")

@@ -13,24 +13,6 @@
     <title>Title</title>
 </head>
 <body>
-<form:form modelAttribute="user" method="post">
-    <label>First Name</label>
-    <form:input path="firstName"/>
-
-    <label>Last Name</label>
-    <form:input path="lastName"/>
-
-    <label>Email</label>
-    <form:input path="email"/>
-
-    <label>Password</label>
-    <form:input path="password"/>
-
-    <label>Phone Number</label>
-    <form:input path="numberPhone"/>
-
-    <button>Save</button>
-</form:form>
 <ul>
     <c:forEach var="user" items="${users}">
         <li>${user.firstName}${user.lastName}<a href="/deleteUser/${user.id}">Delete</a><a href="/updateUser/${user.id}">Update</a></li>
