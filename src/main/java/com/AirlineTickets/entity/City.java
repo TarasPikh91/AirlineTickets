@@ -11,12 +11,12 @@ import java.util.List;
 
 @Entity
 public class City {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
 
+<<<<<<< HEAD
     @ManyToOne
     private Country country;
 
@@ -25,6 +25,9 @@ public class City {
 
 
     public City() {
+=======
+    City() {
+>>>>>>> origin/prince
 
     }
 
@@ -52,6 +55,7 @@ public class City {
         this.name = name;
     }
 
+<<<<<<< HEAD
     public Country getCountry() {
         return country;
     }
@@ -68,6 +72,8 @@ public class City {
         this.tickets = tickets;
     }
 
+=======
+>>>>>>> origin/prince
     @Override
     public String toString() {
         return "City{" +

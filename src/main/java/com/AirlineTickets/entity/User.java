@@ -1,8 +1,6 @@
 package com.AirlineTickets.entity;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class User {
@@ -15,15 +13,7 @@ public class User {
     private String password;
     private String numberPhone;
 
-    @OneToMany(mappedBy = "user")
-    private List<Ticket> tickets = new ArrayList<Ticket>();
-
-    @ManyToMany
-    @JoinTable(name = "orders_user", joinColumns = @JoinColumn(name="user"),
-    inverseJoinColumns = @JoinColumn(name = "orders"))
-    private List<Orders> orders = new ArrayList<Orders>();
-
-   public User(){
+    User(){
 
     }
 
@@ -82,22 +72,6 @@ public class User {
 
     public void setNumberPhone(String numberPhone) {
         this.numberPhone = numberPhone;
-    }
-
-    public List<Ticket> getTickets() {
-        return tickets;
-    }
-
-    public void setTickets(List<Ticket> tickets) {
-        this.tickets = tickets;
-    }
-
-    public List<Orders> getOrders() {
-        return orders;
-    }
-
-    public void setOrders(List<Orders> orders) {
-        this.orders = orders;
     }
 
     @Override

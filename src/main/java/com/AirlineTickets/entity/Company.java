@@ -1,8 +1,9 @@
 package com.AirlineTickets.entity;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by ooo on 10/29/2017.
@@ -14,10 +15,7 @@ public class Company {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "company")
-    private List<Plane> planes = new ArrayList<Plane>();
-
-    public Company(){
+    Company(){
 
     }
 
@@ -39,14 +37,6 @@ public class Company {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public List<Plane> getPlanes() {
-        return planes;
-    }
-
-    public void setPlanes(List<Plane> planes) {
-        this.planes = planes;
     }
 
     @Override
