@@ -7,7 +7,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%-- <!DOCTYPE html> --%>
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
 <html>
 <head>
   <title>SkyFlow</title>
@@ -30,7 +34,11 @@
 <body>
  <div class="wrapper">
   <div class="header" id="header">
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
    <div class="logo">
      <img src="../css/images/logoSkyFlow.png" alt="logo" id="logo">
    </div>
@@ -62,7 +70,11 @@
    <sec:authorize access="isAuthenticated()">
     <form:form action="logout" method="post"><button class="btn btn-default">Log Out</button></form:form>
    </sec:authorize>
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
   </div>
   <div class="content">
     <div class="fustTickets">
@@ -88,7 +100,11 @@
          </c:forEach>
         </select>
        <%--</datalist>--%>
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
       </div>
       <div class="tocity">
        <input type="text" list="cityto" id="toCity" placeholder="To">
@@ -255,6 +271,10 @@
   <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 =======
  <script src="../js/script.js"></script>
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
 </body>
 </html>

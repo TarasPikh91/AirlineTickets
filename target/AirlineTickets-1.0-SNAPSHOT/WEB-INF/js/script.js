@@ -54,4 +54,8 @@ $(document).scroll(function() {
     }
   }
 });
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches

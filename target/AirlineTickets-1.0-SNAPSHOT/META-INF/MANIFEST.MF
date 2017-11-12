@@ -5,5 +5,9 @@ Created-By: IntelliJ IDEA
 Build-Jdk: 1.8.0_131
 =======
 Build-Jdk: 1.8.0_151
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
 

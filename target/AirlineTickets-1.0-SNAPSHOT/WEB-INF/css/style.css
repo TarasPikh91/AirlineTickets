@@ -260,7 +260,11 @@ a:visited{
   height: 100.2px;
 =======
   height: 102px;
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
   margin-top: -5.3%;
   position: fixed;
 }
@@ -795,7 +799,11 @@ a:visited{
   color: rgb(207, 207, 207));
 =======
   color: rgb(207, 207, 207);
+<<<<<<< HEAD
 >>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
 }
 .footer > .footerBl3 > p > a:hover{
   color: rgb(207, 207, 207);
