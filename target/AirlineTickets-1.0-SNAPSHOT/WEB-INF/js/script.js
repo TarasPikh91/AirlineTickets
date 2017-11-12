@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // package main;
 //
 // import java.io.File;
@@ -30,3 +31,27 @@ $(document).scroll(function() {
     }
   }
 });
+=======
+package main;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class main {
+    public static void main(String args[]) throws FileNotFoundException {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter count layers");
+        int layers = scan.nextInt();
+        System.out.println("enter count of radius");
+        double radius = scan.nextDouble();
+        if (layers >= 1 && layers <= 100 || radius >= 1 && radius <= 100) {
+            double t = 2.0;
+            double s = Math.pow(radius, t);
+            double squar = s / layers;
+            double radiusSmall = Math.sqrt(squar);
+            System.out.println(radiusSmall);
+        }
+    }
+}
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf

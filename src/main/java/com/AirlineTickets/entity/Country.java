@@ -1,8 +1,9 @@
 package com.AirlineTickets.entity;
 
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by ooo on 10/29/2017.
@@ -15,13 +16,7 @@ public class Country {
     private int id;
     private String name;
 
-    @OneToOne
-    private Ticket ticket;
-
-    @OneToMany(mappedBy = "country")
-    private List<City> cities = new ArrayList<City>();
-
-   public Country(){
+    Country(){
 
     }
 
@@ -43,22 +38,6 @@ public class Country {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Ticket getTicket() {
-        return ticket;
-    }
-
-    public void setTicket(Ticket ticket) {
-        this.ticket = ticket;
-    }
-
-    public List<City> getCities() {
-        return cities;
-    }
-
-    public void setCities(List<City> cities) {
-        this.cities = cities;
     }
 
     @Override

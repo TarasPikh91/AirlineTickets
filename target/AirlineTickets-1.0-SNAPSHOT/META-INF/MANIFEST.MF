@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
 Built-By: we1
 Created-By: IntelliJ IDEA
+<<<<<<< HEAD
 Build-Jdk: 1.8.0_151
+=======
+Build-Jdk: 1.8.0_131
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
 

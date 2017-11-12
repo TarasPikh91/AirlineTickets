@@ -256,7 +256,11 @@ a:visited{
 .header{
   background-color: rgba(255, 255, 255, 0.95); /*rgba(68, 208, 255, 0.29)*/
   width: 100%;
+<<<<<<< HEAD
   height: 102px;
+=======
+  height: 100.2px;
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
   margin-top: -5.3%;
   position: fixed;
 }
@@ -787,7 +791,11 @@ a:visited{
   color: rgb(207, 207, 207);
 }
 .footer > .footerBl2 > p > a:hover{
+<<<<<<< HEAD
   color: rgb(207, 207, 207);
+=======
+  color: rgb(207, 207, 207));
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
 }
 .footer > .footerBl3 > p > a:hover{
   color: rgb(207, 207, 207);

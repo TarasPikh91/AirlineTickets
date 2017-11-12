@@ -17,6 +17,7 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+<<<<<<< HEAD
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -51,6 +52,9 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+=======
+
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
 
 
 </web-app>

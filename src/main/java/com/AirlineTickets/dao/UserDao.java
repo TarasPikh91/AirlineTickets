@@ -9,11 +9,4 @@ public interface UserDao extends JpaRepository<User, Integer> {
 
     @Query("select u from User u left join fetch u.tickets where u.id=:id")
     User userWithTickets(@Param("id")int id);
-
-    User findByEmail(String email);
-
-    User findByPassword(String password);
-
-    @Query("select u from User u where u.uuid=:uuid")
-    User userWithUuid(@Param("uuid") String uuid);
 }

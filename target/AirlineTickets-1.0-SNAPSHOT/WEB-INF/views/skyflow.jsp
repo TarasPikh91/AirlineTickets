@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%-- <!DOCTYPE html> --%>
+=======
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<!DOCTYPE html>--%>
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
 <html>
 <head>
   <title>SkyFlow</title>
@@ -14,16 +19,24 @@
   <!-- <link rel="stylesheet" href="../libraries/css/bootstrap.css"> -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/font-awesome.min.css">
+<<<<<<< HEAD
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 </head>
 <body>
  <div class="wrapper">
   <div class="header" id="header">
+=======
+</head>
+<body>
+ <div class="wrapper">
+  <div class="header">
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
    <div class="logo">
      <img src="../css/images/logoSkyFlow.png" alt="logo" id="logo">
    </div>
    <div class="menu">
     <ul>
+<<<<<<< HEAD
 
      <li><a href="#">Flights</a></li>
      <li><a href="#">News</a></li>
@@ -42,6 +55,14 @@
    <sec:authorize access="isAuthenticated()">
     <form:form action="logout" method="post"><button class="btn btn-default">Log Out</button></form:form>
    </sec:authorize>
+=======
+     <li><a href="#">Flights</a></li>
+     <li><a href="#">News</a></li>
+     <li><a href="#">About</a></li>
+    </ul>
+   </div>
+   <p><a href="#" id="SignInSignUp">SignIn/SignUp</a></p>
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
   </div>
   <div class="content">
     <div class="fustTickets">
@@ -49,6 +70,7 @@
      <a href="#" id="oneWay">One-Way</a>
      <form action="" method="post">
       <div class="formCity">
+<<<<<<< HEAD
        <%--<input type="text" list="cityfrom" id="fromCity" placeholder="From">--%>
        <label for="fromCity" id="label1"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
        <%--<datalist id="cityfrom">--%>
@@ -58,6 +80,15 @@
          </c:forEach>
         </select>
        <%--</datalist>--%>
+=======
+       <input type="text" list="cityfrom" id="fromCity" placeholder="From">
+       <label for="fromCity" id="label1"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
+       <datalist id="cityfrom">
+        <option value="New York"></option>
+        <option value="Barcelona"></option>
+        <option value="Lviv"></option>
+       </datalist>
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
       </div>
       <div class="tocity">
        <input type="text" list="cityto" id="toCity" placeholder="To">
@@ -219,6 +250,11 @@
    </div>
   </nav> -->
   <!-- <script type="text/javascript" src="../libraries/js/bootstrap.min.js"></script> -->
+<<<<<<< HEAD
  <script src="../js/script.js"></script>
+=======
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+>>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
 </body>
 </html>
