@@ -1,13 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<!DOCTYPE html>--%>
+=======
+>>>>>>> origin/Bohdan
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%-- <!DOCTYPE html> --%>
+<<<<<<< HEAD
 =======
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<!DOCTYPE html>--%>
 >>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
+=======
+<<<<<<< HEAD
+>>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
+>>>>>>> origin/Bohdan
 <html>
 <head>
   <title>SkyFlow</title>
@@ -20,6 +34,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/font-awesome.min.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -31,12 +46,39 @@
  <div class="wrapper">
   <div class="header">
 >>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
+=======
+</head>
+<body>
+ <div class="wrapper">
+  <div class="header">
+=======
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div class="wrapper">
+  <div class="header" id="header">
+<<<<<<< HEAD
+>>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
+>>>>>>> origin/Bohdan
    <div class="logo">
      <img src="../css/images/logoSkyFlow.png" alt="logo" id="logo">
    </div>
    <div class="menu">
     <ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+     <li><a href="#">Flights</a></li>
+     <li><a href="#">News</a></li>
+     <li><a href="#">About</a></li>
+    </ul>
+   </div>
+   <p><a href="#" id="SignInSignUp">SignIn/SignUp</a></p>
+=======
+>>>>>>> origin/Bohdan
 
      <li><a href="#">Flights</a></li>
      <li><a href="#">News</a></li>
@@ -55,6 +97,7 @@
    <sec:authorize access="isAuthenticated()">
     <form:form action="logout" method="post"><button class="btn btn-default">Log Out</button></form:form>
    </sec:authorize>
+<<<<<<< HEAD
 =======
      <li><a href="#">Flights</a></li>
      <li><a href="#">News</a></li>
@@ -63,6 +106,13 @@
    </div>
    <p><a href="#" id="SignInSignUp">SignIn/SignUp</a></p>
 >>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
+=======
+<<<<<<< HEAD
+>>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
+>>>>>>> origin/Bohdan
   </div>
   <div class="content">
     <div class="fustTickets">
@@ -71,6 +121,17 @@
      <form action="" method="post">
       <div class="formCity">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+       <input type="text" list="cityfrom" id="fromCity" placeholder="From">
+       <label for="fromCity" id="label1"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
+       <datalist id="cityfrom">
+        <option value="New York"></option>
+        <option value="Barcelona"></option>
+        <option value="Lviv"></option>
+       </datalist>
+=======
+>>>>>>> origin/Bohdan
        <%--<input type="text" list="cityfrom" id="fromCity" placeholder="From">--%>
        <label for="fromCity" id="label1"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
        <%--<datalist id="cityfrom">--%>
@@ -80,6 +141,7 @@
          </c:forEach>
         </select>
        <%--</datalist>--%>
+<<<<<<< HEAD
 =======
        <input type="text" list="cityfrom" id="fromCity" placeholder="From">
        <label for="fromCity" id="label1"><i class="fa fa-map-marker" aria-hidden="true"></i></label>
@@ -89,6 +151,13 @@
         <option value="Lviv"></option>
        </datalist>
 >>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
+=======
+<<<<<<< HEAD
+>>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
+>>>>>>> origin/Bohdan
       </div>
       <div class="tocity">
        <input type="text" list="cityto" id="toCity" placeholder="To">
@@ -251,10 +320,22 @@
   </nav> -->
   <!-- <script type="text/javascript" src="../libraries/js/bootstrap.min.js"></script> -->
 <<<<<<< HEAD
+<<<<<<< HEAD
  <script src="../js/script.js"></script>
 =======
   <script type="text/javascript" src="../js/script.js"></script>
   <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 >>>>>>> 82e4b0a613e38ab121f2676a8d36f2fdd4a166bf
+=======
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+=======
+ <script src="../js/script.js"></script>
+<<<<<<< HEAD
+>>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
+=======
+>>>>>>> origin/prince
+>>>>>>> TarasBranches
+>>>>>>> origin/Bohdan
 </body>
 </html>
