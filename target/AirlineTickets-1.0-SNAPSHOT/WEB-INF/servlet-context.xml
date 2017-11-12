@@ -20,10 +20,21 @@
 
     <mvc:annotation-driven/>
 
+<<<<<<< HEAD
  <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
     <mvc:resources mapping="/fonts/**" location="/WEB-INF/fonts/"/>
     <mvc:resources mapping="/css/**" location="/WEB-INF/libraries/css/"/>
     <mvc:resources mapping="/fonts/**" location="/WEB-INF/css/fonts/"/>
+=======
+
+    <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
+    <mvc:resources mapping="/fonts/**" location="/WEB-INF/fonts/"/>
+    <!--<mvc:resources mapping="/css/**" location="/WEB-INF/libraries/css/"/>-->
+    <mvc:resources mapping="/fonts/**" location="/WEB-INF/css/fonts/"/>
+    <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
+
+
+>>>>>>> 6311f77949f252e04de72368bb477a4eaf417faf
 
 
 </beans>
