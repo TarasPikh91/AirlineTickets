@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
 Built-By: we1
 Created-By: IntelliJ IDEA
+<<<<<<< HEAD
 Build-Jdk: 1.8.0_131
+=======
+Build-Jdk: 1.8.0_151
+>>>>>>> origin/prince
 
